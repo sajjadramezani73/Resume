@@ -3,18 +3,17 @@
 const plugin = require('tailwindcss/plugin');
 const colors = require("tailwindcss/colors");
 const customColors = {
-  primary: '#6A74CF',
-  primaryLight: '#D1AAFF',
-  secondary: '#35A6EF',
-  secondaryLight: '#91C6FC',
+  primary: '#0ba376',
+  // primaryLight: '#D1AAFF',
+  secondary: '#0b7180',
 
-  caption: '#7A7A7A',
-  captionLight: '#D9D9D9',
-  captionDark: '#545353',
-  danger: '#FF3B3B',
-  light: '#F9F9F9',
-  body: '#181818',
-  titr: '#424242',
+  caption: '#646464',
+  captionLight: '#999999',
+  captionDark: '#323232',
+  // danger: '#FF3B3B',
+  // light: '#F9F9F9',
+  // body: '#181818',
+  // titr: '#424242',
 }
 
 module.exports = {
@@ -52,6 +51,9 @@ module.exports = {
       '7xl': '5rem',
     },
     extend: {},
+    container: {
+      center: true,
+    },
   },
   plugins: [
     plugin(function ({ addComponents, matchComponents, theme }) {
