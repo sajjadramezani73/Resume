@@ -1,8 +1,9 @@
-import React from 'react'
+import useTransition from "@/hooks/useTransition"
 
 const About = () => {
+    const { t } = useTransition()
     return (
-        <div>About</div>
+        <div>{t.about}</div>
     )
 }
 
