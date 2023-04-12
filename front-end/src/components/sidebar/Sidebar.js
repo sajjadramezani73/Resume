@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SidebarItem from './components/SidebarItem';
-import Link from 'next/link';
 import useTransition from '@/hooks/useTransition';
+import SwitchLanguage from './components/SwitchLanguage';
 
 const Sidebar = () => {
 
@@ -43,16 +43,7 @@ const Sidebar = () => {
                 {links.map(item => {
                     return <SidebarItem key={item.title} item={item} isLink={false} />
                 })}
-                <div>
-                    <Link href="/about" locale="en">
-                        To en
-                    </Link>
-                </div>
-                <div>
-                    <Link href="/about" locale="fa">
-                        To fa
-                    </Link>
-                </div>
+                <SwitchLanguage />
             </div>
             <div className="bg-white rounded flex-grow">
                 {routeLinks.map(item => {
