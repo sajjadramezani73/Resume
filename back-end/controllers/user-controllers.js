@@ -3,13 +3,14 @@ const HttpError = require('../model/http-error')
 
 const createUser = async (req, res, next) => {
 
-    const { firstName, lastName, job, gender, bio,
+    const { firstName, lastName, job, address, gender, bio,
         age, email, phone, socialsNetwork, avatar } = req.body
 
     const createUser = new User({
         firstName: firstName,
         lastName: lastName,
         job: job,
+        address: address,
         bio: bio,
         age: age,
         email: email,

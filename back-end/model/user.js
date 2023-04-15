@@ -5,6 +5,7 @@ const userSchema = new Schema({
     firstName: { type: { fa: String, en: String }, required: true },
     lastName: { type: { fa: String, en: String }, required: true },
     job: { type: { fa: String, en: String }, required: true },
+    address: { type: { fa: String, en: String }, required: true },
     bio: { type: { fa: String, en: String }, required: true },
     gender: { type: { fa: String, en: String }, required: true },
     age: { type: Number, required: true },
