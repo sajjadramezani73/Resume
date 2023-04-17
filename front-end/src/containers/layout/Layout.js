@@ -1,6 +1,5 @@
 import Sidebar from '@/components/sidebar/Sidebar'
 import { useRouter } from 'next/router'
-import React from 'react'
 
 const Layout = ({ children }) => {
     const { locale } = useRouter()
