@@ -1,6 +1,11 @@
 const User = require("../model/user")
 const HttpError = require('../model/http-error')
 
+const getUser = async (req, res, next) => {
+    const { location } = req.headers
+    console.log(location)
+}
+
 const createUser = async (req, res, next) => {
 
     const { firstName, lastName, job, address, gender, bio,
@@ -30,4 +35,5 @@ const createUser = async (req, res, next) => {
     res.json({ user: createUser })
 }
 
+exports.getUser = getUser
 exports.createUser = createUser

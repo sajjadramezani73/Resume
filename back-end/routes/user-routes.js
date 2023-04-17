@@ -7,6 +7,8 @@ const userControllers = require('../controllers/user-controllers')
 
 // router.post('/login', userControllers.login)
 
+router.get('/getUser', userControllers.getUser)
+
 router.post('/createUser', userControllers.createUser)
 
 // router.post('/update', fileUpload.single('avatar'), userControllers.updeteUser)
