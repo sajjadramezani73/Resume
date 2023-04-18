@@ -1,10 +1,10 @@
 import useTransition from "@/hooks/useTransition"
-import { useUserAction } from "@/store/userSlice"
+import { useAboutAction } from "@/store/aboutSlice"
 
 const About = () => {
     const { t, locale } = useTransition()
 
-    const { user } = useUserAction()
+    const { about } = useAboutAction()
 
     return (
         <>
