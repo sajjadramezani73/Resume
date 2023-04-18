@@ -3,7 +3,30 @@ const HttpError = require('../model/http-error')
 
 const getUser = async (req, res, next) => {
     const { location } = req.headers
-    console.log(location)
+
+    let user
+    try {
+        user = await User.findOne({})
+    } catch (err) {
+        const error = new HttpError('Creating user faild', 500)
+        return next(error)
+    }
+
+    const aboutMe = {
+        firstName: user.firstName[location],
+        lastName: user.lastName[location],
+        job: user.job[location],
+        address: user.address[location],
+        bio: user.bio[location],
+        gender: user.gender[location],
+        age: user.age,
+        email: user.email,
+        phone: user.phone,
+        socialsNetwork: user.socialsNetwork,
+        avatar: user.avatar,
+    }
+
+    res.json({ aboutMe: aboutMe })
 }
 
 const createUser = async (req, res, next) => {
