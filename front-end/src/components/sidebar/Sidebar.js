@@ -41,7 +41,7 @@ const Sidebar = () => {
         <div className="h-full flex flex-col gap-y-2">
             <div className="bg-white rounded">
                 {links.map(item => {
-                    return <SidebarItem key={item.title} item={item} isLink={false} />
+                    return <SidebarItem key={item.icon} item={item} isLink={false} />
                 })}
                 <SwitchLanguage />
             </div>
