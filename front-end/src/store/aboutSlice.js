@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const initialState = { aboutMe: null };
 
@@ -15,8 +15,12 @@ const { actions, reducer } = createSlice({
 
 export const useAboutAction = () => {
 
+    const dispatch = useDispatch()
     const { aboutMe } = useSelector(store => store.about)
 
-    return { aboutMe }
+    return {
+        aboutMe,
+        addAboutMe: (aboutMe) => dispatch(actions.addAboutMe(aboutMe))
+    }
 }
 export default reducer;
