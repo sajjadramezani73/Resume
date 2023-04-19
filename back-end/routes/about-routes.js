@@ -1,15 +1,15 @@
 const express = require('express')
 const router = express()
-const userControllers = require('../controllers/user-controllers')
+const aboutControllers = require('../controllers/about-controllers')
 
 
 // router.post('/signup', userControllers.signup)
 
 // router.post('/login', userControllers.login)
 
-router.get('/getUser', userControllers.getUser)
+router.get('/getAbout', aboutControllers.getAbout)
 
-router.post('/createUser', userControllers.createUser)
+router.post('/createAbout', aboutControllers.createAbout)
 
 // router.post('/update', fileUpload.single('avatar'), userControllers.updeteUser)
 

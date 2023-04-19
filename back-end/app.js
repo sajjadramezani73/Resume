@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 
 // import routes
-const userRoutes = require('./routes/user-routes')
+const aboutRoutes = require('./routes/about-routes')
 
 const app = express()
 app.use(bodyParser.json())
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 })
 
 // routes
-app.use('/api/user', userRoutes)
+app.use('/api/about', aboutRoutes)
 
 app.use((error, req, res, next) => {
     if (req.file) {

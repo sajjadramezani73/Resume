@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const userSchema = new Schema({
+const aboutSchema = new Schema({
     firstName: { fa: { type: String, required: true }, en: { type: String, required: true } },
     lastName: { fa: { type: String, required: true }, en: { type: String, required: true } },
     job: { fa: { type: String, required: true }, en: { type: String, required: true } },
@@ -15,4 +15,4 @@ const userSchema = new Schema({
     avatar: { type: String },
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('About', aboutSchema)
