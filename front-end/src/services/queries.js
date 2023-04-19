@@ -1,6 +1,6 @@
 import service from "./Api";
 
 export const getAbout = async () => {
-    const res = await service.get('/api/user/getUser')
+    const res = await service.get('/api/about/getAbout')
     return res?.data;
 } 
