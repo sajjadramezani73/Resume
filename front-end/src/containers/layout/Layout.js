@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
                     <div className="w-4/12 bg-white shadow-[-14px_0px_20px_-20px_rgba(0,0,0,0.1)] scale-[1.05] rounded">
                         <UserInfo />
                     </div>
-                    <div className="w-8/12 bg-white flex-grow rounded-e ps-10">{children}</div>
+                    <div className="w-8/12 bg-white flex-grow rounded-e p-7 ps-10">{children}</div>
                 </div>
             </div>
         </div>

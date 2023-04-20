@@ -1,8 +1,16 @@
-import React from 'react'
+import Title from '@/components/titlePage/Title'
+import useTransition from '@/hooks/useTransition'
 
 const Projects = () => {
+
+    const { t } = useTransition()
+
     return (
-        <div>Projects</div>
+        <>
+            <div className="h-full">
+                <Title>{t.projects}</Title>
+            </div>
+        </>
     )
 }
 
