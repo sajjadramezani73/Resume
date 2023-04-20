@@ -141,3 +141,7 @@ button:disabled {
 .ltr {
     direction: ltr;
 }
+
+.border-center-image {
+    border-image: linear-gradient(-90deg, transparent, #d2d2d2, transparent) 1;
+}
