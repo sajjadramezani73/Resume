@@ -50,7 +50,12 @@ module.exports = {
       '6xl': '4rem',
       '7xl': '5rem',
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        shadowRight: '14px 0 20px -20px rgba(0,0,0,0.1)',
+        shadowLeft: '-14px 0 20px -20px rgba(0,0,0,0.1)',
+      }
+    },
     container: {
       center: true,
     },
