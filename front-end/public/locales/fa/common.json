@@ -2,5 +2,9 @@
     "about": "درباره من",
     "resume": "رزومه",
     "projects": "پروژه ها",
-    "downloadCV": "دانلود رزومه"
+    "downloadCV": "دانلود رزومه",
+    "age": "سن",
+    "email": "ایمیل",
+    "phone": "شماره تماس",
+    "address": "آدرس"
 }
