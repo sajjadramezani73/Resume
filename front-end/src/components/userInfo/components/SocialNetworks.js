@@ -13,7 +13,7 @@ const SocialNetworks = ({ socialNetworks }) => {
         <>
             {arraySocials?.map(item => {
                 return (
-                    <a href={socialNetworks[item]} target='_blank'>
+                    <a key={item} href={socialNetworks[item]} target='_blank'>
                         <LoadSvgIcon name={item} color="var(--color-captionDark)" size={18} />
                     </a>
                 )
