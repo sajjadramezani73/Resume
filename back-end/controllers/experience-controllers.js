@@ -3,7 +3,30 @@ const HttpError = require('../model/http-error')
 
 const getExperiences = async (req, res, next) => {
 
-    res.json({ experience: 'experience' })
+    const { location } = req.headers
+
+    let experiences
+    try {
+        experiences = await Experience.find({})
+    } catch (err) {
+        const error = new HttpError('get experience faild', 500)
+        return next(error)
+    }
+
+    const translatedExperiences = experiences.map(item => {
+        const translatedExp = {}
+        Object.keys(item._doc).forEach(exp => {
+            console.log(exp)
+            if (item._doc[exp].hasOwnProperty('fa')) {
+                translatedExp[exp] = item._doc[exp][location]
+            } else {
+                translatedExp[exp] = item._doc[exp]
+            }
+        })
+        return translatedExp
+    })
+
+    res.json({ experiences: translatedExperiences })
 }
 
 const createExperience = async (req, res, next) => {
