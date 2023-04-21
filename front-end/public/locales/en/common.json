@@ -6,5 +6,6 @@
     "age": "age",
     "email": "email",
     "phone": "phone",
-    "address": "address"
+    "address": "address",
+    "experience": "experinece"
 }
