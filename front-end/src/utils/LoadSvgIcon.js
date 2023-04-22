@@ -268,6 +268,39 @@ const LoadSvgIcon = ({ name, size = 24, color = '#646464', weight = 1, fill = "n
                         />
                     </svg>
                 )
+            case 'education':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 8V18"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M6.7749 27C7.77548 25.4653 9.14312 24.2045 10.7539 23.3318C12.3648 22.4591 14.1679 22.002 15.9999 22.002C17.8319 22.002 19.635 22.4591 21.2459 23.3318C22.8567 24.2045 24.2243 25.4653 25.2249 27"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M28 8L16 12L4 8L16 4L28 8Z"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                        <path
+                            d="M21.1625 10.275C22.0798 11.2767 22.6859 12.5237 22.9068 13.8639C23.1277 15.2041 22.954 16.5796 22.4067 17.8227C21.8595 19.0659 20.9624 20.123 19.8248 20.8651C18.6872 21.6073 17.3583 22.0025 16 22.0025C14.6417 22.0025 13.3128 21.6073 12.1752 20.8651C11.0376 20.123 10.1405 19.0659 9.59329 17.8227C9.04604 16.5796 8.87229 15.2041 9.09322 13.8639C9.31414 12.5237 9.9202 11.2767 10.8375 10.275"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                )
             // case 'folder':
             //     return (
             //         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
