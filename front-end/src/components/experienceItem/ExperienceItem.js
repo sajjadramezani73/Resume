@@ -19,7 +19,7 @@ const experienceItem = ({ item }) => {
                 <p className="text-base text-captionDark font-semibold capitalize">{item?.title}</p>
                 <p className="text-sm text-caption mt-2">{item?.description}</p>
                 <div className="flex flex-wrap gap-x-2 gap-y-1 mt-2">
-                    {item.skill.map(item => {
+                    {item?.skill.map(item => {
                         return <span
                             key={item}
                             className="w-max bg-gray-200 text-caption text-xxs font-medium px-1.5 pt-1 pb-0.5 rounded" >{item}</span>
