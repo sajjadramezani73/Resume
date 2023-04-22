@@ -16,7 +16,6 @@ const getExperiences = async (req, res, next) => {
     const translatedExperiences = experiences.map(item => {
         const translatedExp = {}
         Object.keys(item._doc).forEach(exp => {
-            console.log(exp)
             if (item._doc[exp].hasOwnProperty('fa')) {
                 translatedExp[exp] = item._doc[exp][location]
             } else {
@@ -31,13 +30,12 @@ const getExperiences = async (req, res, next) => {
 
 const createExperience = async (req, res, next) => {
 
-    const { title, company, location, jobType, jobTime, dateStart, dateEnd,
-        description, companyLink, skill, images } = req.body
+    const { title, company, jobType, jobTime, dateStart, dateEnd,
+        description, companyLink, skill } = req.body
 
     const createExperience = new Experience({
         title: title,
         company: company,
-        location: location,
         jobType: jobType,
         jobTime: jobTime,
         dateStart: dateStart,
@@ -45,7 +43,6 @@ const createExperience = async (req, res, next) => {
         description: description,
         companyLink: companyLink,
         skill: skill,
-        images: images
     })
 
     try {
