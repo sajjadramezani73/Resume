@@ -30,7 +30,7 @@ const Resume = () => {
             })
         getEducations()
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 setEducations(res?.educations)
                 setLoadingEdu(false)
             })
@@ -50,7 +50,7 @@ const Resume = () => {
                         <p className="text-base font-bold text-captionDark ms-2 capitalize">{t.experience}</p>
                     </div>
                     <div className="">
-                        {loadingExp ? (
+                        {loadingExp || loadingEdu ? (
                             <>
                                 <ExperienceItemShimmer />
                                 <ExperienceItemShimmer />
@@ -68,7 +68,7 @@ const Resume = () => {
                         <p className="text-base font-bold text-captionDark ms-2 capitalize">{t.education}</p>
                     </div>
                     <div className="">
-                        {loadingEdu ? (
+                        {loadingEdu || loadingExp ? (
                             <>
                                 <EducationItemShimmer />
                                 <EducationItemShimmer />
