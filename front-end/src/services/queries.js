@@ -8,4 +8,10 @@ export const getAbout = async () => {
 export const getExperiences = async () => {
     const res = await service.get('/api/experience/getExperiences')
     return res?.data;
+}
+
+
+export const getEducations = async () => {
+    const res = await service.get('/api/education/getEducations')
+    return res?.data;
 } 
