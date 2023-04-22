@@ -7,5 +7,6 @@
     "email": "email",
     "phone": "phone",
     "address": "address",
-    "experience": "experinece"
+    "experience": "experinece",
+    "education": "education"
 }
