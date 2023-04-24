@@ -32,22 +32,22 @@ const createProject = async (req, res, next) => {
 
     const { title, briefDescription, description, images, links, skills } = req.body
 
-    // const createExperience = new Project({
-    //     title: title,
-    //     briefDescription: briefDescription,
-    //     description: description,
-    //     links: links,
-    //     skills: skills,
-    // })
+    const createProject = new Project({
+        title: title,
+        briefDescription: briefDescription,
+        description: description,
+        links: links,
+        skills: skills,
+    })
 
-    // try {
-    //     await createExperience.save()
-    // } catch (err) {
-    //     const error = new HttpError('Creating experience faild', 500)
-    //     return next(error)
-    // }
+    try {
+        await createProject.save()
+    } catch (err) {
+        const error = new HttpError('Creating project faild', 500)
+        return next(error)
+    }
 
-    res.json({ project: 'createExperience' })
+    res.json({ project: createProject })
 }
 
 exports.getProjects = getProjects
