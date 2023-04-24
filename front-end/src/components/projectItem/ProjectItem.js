@@ -24,7 +24,7 @@ const ProjectItem = ({ item }) => {
                 <div className="flex justify-end pt-4">
                     <Button
                         title={t.viewOnline}
-                        className="w-auto px-4 h-8 text-xs capitalize"
+                        className="!w-auto px-4 h-8 text-xs capitalize"
                         onClick={() => window.open(item?.links[0]?.link, '_black')}
                     />
                 </div>
