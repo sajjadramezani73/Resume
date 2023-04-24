@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 
 const useTransition = () => {
 
-    const { locale } = useRouter()
+    const { locale, locales } = useRouter()
 
     useEffect(() => {
         localStorage.setItem('location', locale)
@@ -15,6 +15,7 @@ const useTransition = () => {
 
     return {
         locale,
+        locales,
         t
     }
 

@@ -309,6 +309,56 @@ const LoadSvgIcon = ({ name, size = 24, color = '#646464', weight = 1, fill = "n
                         ></path>
                     </svg>
                 )
+            case 'upArrow':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 24 24" fill={fill} xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 15L12 9L6 15"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                )
+            case 'downArrow':
+                return (
+                    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L12 15L18 9"
+                            stroke={color}
+                            strokeWidth={weight}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                )
+            case 'iran':
+                return (
+                    <svg width={size} height={size - 7} viewBox="0 0 513 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.991699H512V342.992H0V0.991699Z" fill="white" />
+                        <path d="M0 0.991699H513V114.992H0V0.991699Z" fill="#6DA544" />
+                        <path d="M0 228.891H513V342.891H0V228.891ZM278.8 135.792C278.9 137.792 287.5 161.991 283.2 175.191C276.6 195.492 267.4 196.992 263.4 199.691V134.992L256.5 130.792L249.6 134.992V199.691C245.6 196.992 237.2 197.291 229.8 175.191C225.5 162.491 235.5 137.892 235.6 135.992C235.6 135.992 226.1 144.092 219.8 159.992C213.9 174.792 221.7 209.592 249.3 214.792C251.6 215.192 254 220.391 256.5 220.391C258.6 220.391 260.6 215.191 262.5 214.891C290.9 210.291 297.5 173.192 292.4 159.292C287 144.692 278.8 135.792 278.8 135.792Z"
+                            fill="#D80027" />
+                    </svg>
+                )
+            case 'england':
+                return (
+                    <svg width={size} height={size - 7} viewBox="0 0 513 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.926514H513V342.93H0V0.926514Z" fill="white" />
+                        <path d="M288.562 0.923523H224.438V139.86H0V203.985H224.438V342.922H288.562V203.985H513V139.86H288.562V0.923523Z" fill="#D80027" />
+                        <path d="M394.554 231.401L513 297.205V231.401H394.554ZM312.261 231.401L513 342.922V311.387L369.026 231.401H312.261ZM459.53 342.922L312.261 261.099V342.922H459.53Z" fill="#0052B4" />
+                        <path d="M312.261 231.401L513 342.922V311.387L369.026 231.401H312.261Z" fill="white" />
+                        <path d="M312.261 231.401L513 342.922V311.387L369.026 231.401H312.261Z" fill="#D80027" />
+                        <path d="M90.5174 231.399L0 281.687V231.399H90.5174ZM200.739 245.58V342.921H25.5408L200.739 245.58Z" fill="#0052B4" />
+                        <path d="M143.974 231.401L0 311.387V342.922L200.739 231.401H143.974Z" fill="#D80027" />
+                        <path d="M118.446 112.445L0 46.6406V112.445H118.446ZM200.739 112.445L0 0.923523V32.459L143.974 112.445H200.739ZM53.4702 0.923523L200.739 82.747V0.923523H53.4702Z" fill="#0052B4" />
+                        <path d="M200.739 112.445L0 0.923523V32.459L143.974 112.445H200.739Z" fill="white" />
+                        <path d="M200.739 112.445L0 0.923523V32.459L143.974 112.445H200.739Z" fill="#D80027" />
+                        <path d="M422.483 112.447L513 62.1589V112.447H422.483ZM312.261 98.2653V0.9245H487.459L312.261 98.2653Z" fill="#0052B4" />
+                        <path d="M369.026 112.445L513 32.459V0.923523L312.261 112.445H369.026Z" fill="#D80027" />
+                    </svg>
+                )
             // case 'folder':
             //     return (
             //         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -917,18 +967,6 @@ const LoadSvgIcon = ({ name, size = 24, color = '#646464', weight = 1, fill = "n
             //             <clipPath id="clip0_1_7747">
             //                 <rect width={size} height={size} fill="white" />
             //             </clipPath>
-            //         </svg>
-            //     )
-            // case 'upArrow':
-            //     return (
-            //         <svg width={size} height={size} viewBox="0 0 24 24" fill={fill} xmlns="http://www.w3.org/2000/svg">
-            //             <path
-            //                 d="M18 15L12 9L6 15"
-            //                 stroke={color}
-            //                 strokeWidth={weight}
-            //                 strokeLinecap="round"
-            //                 strokeLinejoin="round"
-            //             />
             //         </svg>
             //     )
             // case 'backArrow':

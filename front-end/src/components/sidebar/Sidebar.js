@@ -39,7 +39,7 @@ const Sidebar = () => {
 
     return (
         <div className="h-full flex flex-col gap-y-2">
-            <div className="bg-white rounded">
+            <div className="bg-white rounded pb-4">
                 {links.map(item => {
                     return <SidebarItem key={item.icon} item={item} isLink={false} />
                 })}
