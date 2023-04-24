@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 const aboutRoutes = require('./routes/about-routes')
 const experienceRoutes = require('./routes/experience-routes')
 const educationRoutes = require('./routes/education-routes')
+const projectRoutes = require('./routes/project-routes')
 
 const app = express()
 app.use(bodyParser.json())
@@ -24,6 +25,7 @@ app.use((req, res, next) => {
 app.use('/api/about', aboutRoutes)
 app.use('/api/experience', experienceRoutes)
 app.use('/api/education', educationRoutes)
+app.use('/api/project', projectRoutes)
 
 app.use((error, req, res, next) => {
     if (req.file) {
