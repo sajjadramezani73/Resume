@@ -14,4 +14,9 @@ export const getExperiences = async () => {
 export const getEducations = async () => {
     const res = await service.get('/api/education/getEducations')
     return res?.data;
+}
+
+export const getProjects = async () => {
+    const res = await service.get('/api/project/getProjects')
+    return res?.data;
 } 
