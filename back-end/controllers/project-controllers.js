@@ -5,27 +5,27 @@ const getProjects = async (req, res, next) => {
 
     const { location } = req.headers
 
-    // let experiences
-    // try {
-    //     experiences = await Experience.find({})
-    // } catch (err) {
-    //     const error = new HttpError('get experience faild', 500)
-    //     return next(error)
-    // }
+    let projects
+    try {
+        projects = await Project.find({})
+    } catch (err) {
+        const error = new HttpError('get projects faild', 500)
+        return next(error)
+    }
 
-    // const translatedExperiences = experiences.map(item => {
-    //     const translatedExp = {}
-    //     Object.keys(item._doc).forEach(exp => {
-    //         if (item._doc[exp].hasOwnProperty('fa')) {
-    //             translatedExp[exp] = item._doc[exp][location]
-    //         } else {
-    //             translatedExp[exp] = item._doc[exp]
-    //         }
-    //     })
-    //     return translatedExp
-    // })
+    const translatedProjects = projects.map(item => {
+        const translatedPrj = {}
+        Object.keys(item._doc).forEach(prj => {
+            if (item._doc[prj].hasOwnProperty('fa')) {
+                translatedPrj[prj] = item._doc[prj][location]
+            } else {
+                translatedPrj[prj] = item._doc[prj]
+            }
+        })
+        return translatedPrj
+    })
 
-    res.json({ projects: 'translatedExperiences' })
+    res.json({ projects: translatedProjects })
 }
 
 const createProject = async (req, res, next) => {
