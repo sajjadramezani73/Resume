@@ -40,11 +40,11 @@ const SwitchLanguage = () => {
 
     return (
         <div className='flex justify-between px-2 relative'>
-            <div className="w-full flex items-center border rounded py-1 pe-1.5 ps-0.5 rtl cursor-pointer"
+            <div className="w-full flex border rounded py-1 pe-1.5 ps-0.5 rtl cursor-pointer"
                 onClick={() => setShowOption(!showOption)}
             >
                 <LoadSvgIcon name="downArrow" size={18} />
-                <div className="flex-grow text-xs text-captionDark text-end uppercase">{locale}</div>
+                <p className="flex-grow text-xs text-captionDark text-end pt-0.5 uppercase">{locale}</p>
             </div>
             {showOption && (
                 <div className="p-2 absolute top-[30px] start-1.5 z-10 bg-white border rounded shadow">
