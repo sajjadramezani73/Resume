@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SidebarItem from './components/SidebarItem';
 import useTransition from '@/hooks/useTransition';
 import SwitchLanguage from './components/SwitchLanguage';
+import SwitchTheme from './components/SwitchTheme';
 
 const Sidebar = () => {
 
     const { t, locale } = useTransition()
 
     const [routeLinks, setRouteLinks] = useState([]);
-    const [links] = useState([
-        {
-            icon: 'sun',
-        },
-        {
-            icon: 'moon',
-        },
-    ]);
 
     useEffect(() => {
         setRouteLinks([
@@ -40,9 +33,7 @@ const Sidebar = () => {
     return (
         <div className="h-full flex flex-col gap-y-2">
             <div className="bg-white rounded pb-4">
-                {links.map(item => {
-                    return <SidebarItem key={item.icon} item={item} isLink={false} />
-                })}
+                <SwitchTheme />
                 <SwitchLanguage />
             </div>
             <div className="bg-white rounded flex-grow">
