@@ -9,7 +9,7 @@ const Title = ({ children }) => {
         ${locale == 'fa' ? (theme === 'dark' ? 'border-bottom-image-to-left-dark' : 'border-bottom-image-to-left') :
                 (theme === 'dark' ? 'border-bottom-image-to-right-dark' : 'border-bottom-image-to-right')} `}>
             {children}
-            <span className="absolute top-1 -start-2.5 w-7 h-7 rounded-full bg-primary/5"></span>
+            <span className="absolute top-1 -start-2.5 w-7 h-7 rounded-full bg-primary/5 dark:bg-primary/10"></span>
         </p>
     )
 }
