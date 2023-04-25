@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const getItem = (key) => {
@@ -24,15 +24,19 @@ const { actions, reducer } = createSlice({
 export const useThemeAction = () => {
 
     const dispatch = useDispatch()
-    const { theme } = useSelector(store => store.theme)
+    const { theme: themeMode } = useSelector(store => store.theme)
+
+    const [theme, setTheme] = useState('');
+
 
     useEffect(() => {
-        if (theme === 'dark') {
+        setTheme(themeMode)
+        if (themeMode === 'dark') {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
-    }, [theme]);
+    }, [themeMode]);
 
     return {
         theme,
