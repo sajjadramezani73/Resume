@@ -15,6 +15,7 @@ const SwitchTheme = () => {
                     name='sun'
                     size={20}
                     weight={1.5}
+                    color='var(--color-lightCaptionLight)'
                 />
             ) : (
                 <LoadSvgIcon

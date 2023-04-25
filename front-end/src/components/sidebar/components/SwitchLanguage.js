@@ -40,20 +40,20 @@ const SwitchLanguage = () => {
 
     return (
         <div className='flex justify-between px-2 relative'>
-            <div className="w-full flex border rounded py-1 pe-1.5 ps-0.5 rtl cursor-pointer"
+            <div className="w-full flex border dark:border-caption rounded py-1 pe-1.5 ps-0.5 rtl cursor-pointer"
                 onClick={() => setShowOption(!showOption)}
             >
                 <LoadSvgIcon name="downArrow" size={18} />
-                <p className="flex-grow text-xs text-captionDark text-end pt-0.5 uppercase">{locale}</p>
+                <p className="flex-grow text-xs text-captionDark dark:text-lightCaptionLight text-end pt-0.5 uppercase">{locale}</p>
             </div>
             {showOption && (
-                <div className="p-2 absolute top-[30px] start-1.5 z-10 bg-white border rounded shadow">
+                <div className="p-2 absolute top-[30px] start-1.5 z-10 bg-white dark:bg-bgDark border rounded shadow">
                     {localeList?.map(item => {
                         return <Link href="" locale={item.shortLanguage}>
                             <div
-                                className="flex justify-between items-center rtl gap-x-1 p-1 rounded mb-1.5 last:mb-0 cursor-pointer hover:bg-gray-100 duration-200"
+                                className="flex justify-between items-center rtl gap-x-1 p-1 rounded mb-1.5 last:mb-0 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-50/10 duration-200"
                             >
-                                <p className='capitalize pt-0.5'>{item.language}</p>
+                                <p className='text-captionDark dark:text-lightCaptionLight capitalize pt-0.5'>{item.language}</p>
                                 <LoadSvgIcon name={item.icon} />
                             </div>
                         </Link>

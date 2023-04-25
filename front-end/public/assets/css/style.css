@@ -168,14 +168,30 @@ button:disabled {
     border-image: linear-gradient(-90deg, transparent, #d2d2d2, transparent) 1;
 }
 
+.border-center-image-dark {
+    border-image: linear-gradient(-90deg, transparent, #515151, transparent) 1;
+}
+
 .border-bottom-image-to-left {
     border-image: linear-gradient(to left, #d2d2d2, transparent) 1;
+}
+
+.border-bottom-image-to-left-dark {
+    border-image: linear-gradient(to left, #515151, transparent) 1;
 }
 
 .border-bottom-image-to-right {
     border-image: linear-gradient(to right, #d2d2d2, transparent) 1;
 }
 
+.border-bottom-image-to-right-dark {
+    border-image: linear-gradient(to right, #515151, transparent) 1;
+}
+
 .border-vertical-image {
     border-image: linear-gradient(to bottom, #d2d2d2, transparent) 1;
+}
+
+.border-vertical-image-dark {
+    border-image: linear-gradient(to bottom, #515151, transparent) 1;
 }
