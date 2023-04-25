@@ -53,8 +53,8 @@ const SwitchLanguage = () => {
                             <div
                                 className="flex justify-between items-center rtl gap-x-1 p-1 rounded mb-1.5 last:mb-0 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-50/10 duration-200"
                             >
-                                <p className='text-captionDark dark:text-lightCaptionLight capitalize pt-0.5'>{item.language}</p>
-                                <LoadSvgIcon name={item.icon} />
+                                <p className='text-sm text-captionDark dark:text-lightCaptionLight capitalize pt-0.5'>{item.language}</p>
+                                <LoadSvgIcon name={item.icon} size={20} />
                             </div>
                         </Link>
                     })}
