@@ -23,7 +23,7 @@ const UserInfo = () => {
                     <SocialNetworks socialNetworks={aboutMe?.socialsNetwork} />
                 </div>
             </div>
-            <div className={`border-t p-4 w-full flex justify-center items-center gap-x-2 hover:gap-x-3 duration-300 cursor-pointer group
+            <div className={`border-t border-b md:border-b-0 p-4 w-full flex justify-center items-center gap-x-2 hover:gap-x-3 duration-300 cursor-pointer group
             ${theme === 'dark' ? "border-center-image-dark" : "border-center-image"}`}>
                 <p className='text-base text-captionDark dark:text-lightCaptionLight font-bold uppercase'>{t.downloadCV}</p>
                 <LoadSvgIcon

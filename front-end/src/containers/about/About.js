@@ -14,11 +14,11 @@ const About = () => {
         <>
             <div className="h-full">
                 <Title>{t.about}</Title>
-                <div className="grid grid-cols-2">
-                    <div className={`pt-7 border-e pe-6 ${theme === 'dark' ? 'border-vertical-image-dark' : 'border-vertical-image'}`}>
+                <div className="grid gris-cols-1 md:grid-cols-2">
+                    <div className={`pt-7 md:border-e md:pe-6 ${theme === 'dark' ? 'border-vertical-image-dark' : 'border-vertical-image'}`}>
                         <p className="text-base text-caption dark:text-lightCaption font-medium leading-8 capitalize">{aboutMe?.bio}</p>
                     </div>
-                    <div className="pt-7 ps-6 grid gap-y-3">
+                    <div className="pt-7 md:ps-6 grid gap-y-3">
                         <AboutItem title={t.age} value={aboutMe?.age} />
                         <AboutItem title={t.phone} value={'0' + aboutMe?.phone} />
                         <AboutItem title={t.email} value={aboutMe?.email} />
