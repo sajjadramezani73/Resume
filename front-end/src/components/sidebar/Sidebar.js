@@ -1,34 +1,8 @@
-import { useEffect, useState } from 'react'
-import SidebarItem from './components/SidebarItem';
-import useTransition from '@/hooks/useTransition';
 import SwitchLanguage from './components/SwitchLanguage';
 import SwitchTheme from './components/SwitchTheme';
+import SidebarItems from './components/SidebarItems';
 
 const Sidebar = () => {
-
-    const { t, locale } = useTransition()
-
-    const [routeLinks, setRouteLinks] = useState([]);
-
-    useEffect(() => {
-        setRouteLinks([
-            {
-                title: t.about,
-                icon: 'user',
-                href: '/about'
-            },
-            {
-                title: t.resume,
-                icon: 'file',
-                href: '/resume'
-            },
-            {
-                title: t.projects,
-                icon: 'project',
-                href: '/projects'
-            },
-        ])
-    }, [locale]);
 
     return (
         <div className="h-full flex flex-col gap-y-2">
@@ -37,9 +11,7 @@ const Sidebar = () => {
                 <SwitchLanguage />
             </div>
             <div className="bg-white dark:bg-bgDark rounded flex-grow">
-                {routeLinks.map(item => {
-                    return <SidebarItem key={item.title} item={item} />
-                })}
+                <SidebarItems />
             </div>
         </div>
     )
