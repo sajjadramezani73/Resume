@@ -12,7 +12,7 @@ const UserInfo = () => {
     const { t } = useTransition()
 
     return (
-        <div className='w-full h-full flex flex-col justify-between items-center pt-20'>
+        <div className='w-full h-full flex flex-col justify-between items-center pt-10 md:pt-20'>
             <div className="text-center">
                 <div className="w-[180px] h-[180px] rounded-full overflow-hidden border mx-auto">
                     <img src={avatar(aboutMe?.avatar)} alt="avatar" className='w-full h-full' />
