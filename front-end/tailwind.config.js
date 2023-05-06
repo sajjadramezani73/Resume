@@ -64,6 +64,10 @@ module.exports = {
     container: {
       center: true,
     },
+    fontFamily: {
+      'roboto': ['roboto'],
+      'iranyekan': ['iranyekan']
+    }
   },
   plugins: [
     plugin(function ({ addComponents, matchComponents, theme }) {

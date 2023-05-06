@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
     }, [router])
 
     return (
-        <div className="w-full h-full flex justify-center items-center md:py-[50px] bg-gradient-to-br from-secondary/70 to-primary/70 dark:from-[#17171b] dark:to-[#28282f]">
+        <div className={`${locale === 'fa' ? 'font-iranyekan' : 'font-roboto'} w-full h-full flex justify-center items-center md:py-[50px] bg-gradient-to-br from-secondary/70 to-primary/70 dark:from-[#17171b] dark:to-[#28282f]`}>
             <div className={`md:container w-full h-full flex flex-col md:flex-row md:gap-x-4 ${locale === 'fa' ? 'rtl' : 'ltr'}`}>
                 <div className="hidden md:block w-[72px] min-w-[72px]">
                     <Sidebar />
