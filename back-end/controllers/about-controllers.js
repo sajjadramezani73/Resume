@@ -58,5 +58,28 @@ const createAbout = async (req, res, next) => {
     res.json({ about: createAbout })
 }
 
+const updeteAbout = async (req, res, next) => {
+    // console.log(req.file)
+    let about
+    try {
+        about = await About.findOne({})
+    } catch (err) {
+        const error = new HttpError('updating about faild', 500)
+        return next(error)
+    }
+
+    if (req.file) {
+        about.avatar = req.file.path
+    }
+    try {
+        await about.save()
+    } catch (err) {
+        const error = new HttpError('Creatupdatinging about faild', 500)
+        return next(error)
+    }
+    res.send(about)
+}
+
 exports.getAbout = getAbout
 exports.createAbout = createAbout
+exports.updeteAbout = updeteAbout
