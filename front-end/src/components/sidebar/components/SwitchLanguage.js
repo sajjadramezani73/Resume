@@ -49,7 +49,7 @@ const SwitchLanguage = () => {
             {showOption && (
                 <div className="p-2 absolute top-[30px] start-1.5 z-10 bg-white dark:bg-bgDark border rounded shadow">
                     {localeList?.map(item => {
-                        return <Link href="" locale={item.shortLanguage}>
+                        return <Link href="" key={item?.language} locale={item.shortLanguage}>
                             <div
                                 className="flex justify-between items-center rtl gap-x-1 p-1 rounded mb-1.5 last:mb-0 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-50/10 duration-200"
                             >
