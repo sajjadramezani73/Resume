@@ -40,7 +40,8 @@ app.use((error, req, res, next) => {
     res.json({ message: error.message || 'Error' })
 })
 
-mongoose.connect('mongodb://127.0.0.1:27017/resume')
+// mongoose.connect('mongodb://127.0.0.1:27017/resume')
+mongoose.connect('mongodb+srv://sajjad-ramezani:sajjad1234@resume.1xrlrg7.mongodb.net/resume?retryWrites=true&w=majority')
     .then(() => {
         app.listen(5000)
     })
